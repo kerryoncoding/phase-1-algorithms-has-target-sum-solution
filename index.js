@@ -1,5 +1,20 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  // Add your pseudocode here
+  // create empty object
+  const checkedObjects = {}
+  // for each item in array...
+  //   determine complement of target ()
+  for (let i=0; i<array.length; i++){
+    let complement = target - array[i]
+    //   check object for complement
+     //  if complement = target,  return true
+    if (checkedObjects[complement]) {return true}
+    //   add item to object
+    else {checkedObjects[array[i]] = true};
+  }
+  // return false
+  return false  
 }
 
 /* 
@@ -8,6 +23,15 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  create empty object
+  for each item in array...
+    determine complement of target ()
+    add item to object
+    check object for complement
+      if complement = target return true
+  
+  return false
+
 */
 
 /*
